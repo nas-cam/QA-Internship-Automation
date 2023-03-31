@@ -1,25 +1,6 @@
-
 import Page from "./page.js";
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername() { return $('//*[@id="username"]'); }
-    get inputPassword() { return $('//*[@id="password"]'); }
-    get buttonSubmit() { return $('[name="login"]'); }
-    get header() { return $('.noo-heading-content'); }
-    get logo() { return $('img.custom-logo'); }
-    get product() { return $('.noo-product-inner.noo-product-inner2'); }
-    get colorDropdown() { return $('#pa_color'); }
-    get sizeDropdown() { return $('#pa_size'); }
-    get buttonAddToCart() { return $('.single_add_to_cart_button.button.alt.wp-element-button'); }
-    get buttonViewCart() { return $('a.button.wc-forward.wp-element-button'); }
-    get tblCart() { return $('.shop_table.shop_table_responsive.cart'); }
-    get buttonProceedToCheckout() { return $('.checkout-button.button.alt.wc-forward.wp-element-button'); }
+class CheckoutPage extends Page{
     get inputFirstName() { return $('#billing_first_name'); }
     get inputLastName() { return $('#billing_last_name'); }
     get inputCompany() { return $('#billing_company'); }
@@ -33,60 +14,6 @@ class LoginPage extends Page {
     get inputEmail() { return $('#billing_email'); }
     get inputTerms() { return $('#terms'); }
     get buttonPlaceOrder() { return $('#place_order'); }
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async enterUsername(username){
-        await this.inputUsername.click();
-        await this.inputUsername.setValue(username);
-    }
-    async enterPassword(password){
-        await this.inputUsername.click();
-        await this.inputUsername.setValue(password);
-    }
-    async clickOnSubmitButton(){
-        await this.buttonSubmit.click();
-    }
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open() {
-        return super.open('my-account');
-    }
-    async logoClick() {
-        await this.logo.click()
-    }
-    async scrollToProduct() {
-        await this.product.scrollIntoView();
-    }
-    async clickToProduct() {
-        await this.product.click();
-    }
-    async clickToColorDropDown() {
-        await this.colorDropdown.click();
-    }
-    async selectColor(color) {
-        await this.colorDropdown.selectByVisibleText(color);
-    }
-    async clickToSizeDropdown() {
-        await this.sizeDropdown.click();
-    }
-    async selectSize(size) {
-        await this.sizeDropdown.selectByVisibleText(size);
-    }
-    async clicktoAddToCartButton() {
-        await this.buttonAddToCart.click();
-    }
-    async clickToViewCartButton() {
-        await this.buttonViewCart.click();
-    }
-    async scrollToTblCart() {
-        await this.tblCart.scrollIntoView();
-    }
-    async clickToProceedToCheckoutButton() {
-        await this.buttonProceedToCheckout.click();
-    }
     async clickOnFirstnameField() {
         await this.inputFirstName.click();
     }
@@ -154,5 +81,5 @@ class LoginPage extends Page {
         await this.buttonPlaceOrder.click();
     }
 }
+export default new CheckoutPage();
 
-export default new LoginPage();
