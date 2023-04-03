@@ -6,8 +6,10 @@ class HomePage extends Page{
     async scrollToProduct() {
         await this.product.scrollIntoView();
     }
+
     async clickToProduct() {
         await this.product.click();
     }
+    
 }
 export default new HomePage();

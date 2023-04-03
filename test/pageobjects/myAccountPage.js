@@ -13,19 +13,23 @@ class MyAccountPage extends Page{
         await this.inputUsername.click();
         await this.inputUsername.setValue(username);
     }
+
     async enterPassword(password){
         await this.inputUsername.click();
         await this.inputUsername.setValue(password);
     }
+
     async clickOnSubmitButton(){
         await this.buttonSubmit.click();
     }
+
     /**
      * overwrite specific options to adapt it to page object
      */
     open() {
         return super.open('my-account');
     }
+    
     async logoClick() {
         await this.logo.click()
     }
