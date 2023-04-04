@@ -18,3 +18,4 @@ class SecurePage extends Page {
     get thankYouNote(){return $('.woocommerce');}
 }
 export default new SecurePage();
+

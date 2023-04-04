@@ -36,3 +36,4 @@ class MyAccountPage extends Page{
 
 }
 export default new MyAccountPage();
+
