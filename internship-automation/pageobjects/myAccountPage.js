@@ -15,8 +15,8 @@ class MyAccountPage extends Page{
     }
 
     async enterPassword(password){
-        await this.inputUsername.click();
-        await this.inputUsername.setValue(password);
+        await this.inputPassword.click();
+        await this.inputPassword.setValue(password);
     }
 
     async clickOnSubmitButton(){
