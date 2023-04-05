@@ -9,13 +9,20 @@ class MyAccountPage extends Page{
     get header() { return $('.noo-heading-content'); }
     get logo() { return $('img.custom-logo'); }
 
+    async clickOnUsername(){
+        await this.inputUsername.click()
+    }
+
     async enterUsername(username){
-        await this.inputUsername.click();
         await this.inputUsername.setValue(username);
+    }
+    
+    async clickOnPassword(){
+        await this.inputPassword.click();
     }
 
     async enterPassword(password){
-        await this.inputPassword.click();
+       
         await this.inputPassword.setValue(password);
     }
 
