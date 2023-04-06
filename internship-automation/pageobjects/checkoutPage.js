@@ -14,6 +14,8 @@ class CheckoutPage extends Page{
     get inputEmail() { return $('#billing_email'); }
     get inputTerms() { return $('#terms'); }
     get buttonPlaceOrder() { return $('#place_order'); }
+    get checkoutPageHeader() { return $('.page-title');}
+    get thankYouNote(){return $('.woocommerce');}
 
     async clickOnFirstnameField() {
         await this.inputFirstName.click();
@@ -101,8 +103,7 @@ class CheckoutPage extends Page{
 
     async clickOnPlaceOrderButton() {
         await this.buttonPlaceOrder.click();
-    }
-    
+    }  
 }
-export default new CheckoutPage();
 
+export default new CheckoutPage();
