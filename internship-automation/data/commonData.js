@@ -2,10 +2,10 @@ export const loginData = {
     validUsername: 'username_1',
     validPassword: 'strongPssword1?'
 };
+
 export const myAccountPageData={
     searchFieldText:'Search',
     myAccountHeaderText:'MY ACCOUNT'
-
 };
 
 export const productPageData={
@@ -13,9 +13,11 @@ export const productPageData={
     productSize :'36',
     productHeaderText: 'PINK DROP SHOULDER OVERSIZED T SHIRT'
 };
+
 export const cartPageData={
     cartPageHeader:'CART'
 };
+
 export const checkoutPageData={
     checkoutPageHeader:'CHECKOUT',
     firstName:'Adaline',

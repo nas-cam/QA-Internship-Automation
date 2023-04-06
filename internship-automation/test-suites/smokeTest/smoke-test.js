@@ -54,5 +54,3 @@ describe('001: Smoke test for Shop Tools App', () => {
         await expect(checkoutPage.thankYouNote).toHaveTextContaining(checkoutPageData.thankYouNote);
     });
 });
-
-

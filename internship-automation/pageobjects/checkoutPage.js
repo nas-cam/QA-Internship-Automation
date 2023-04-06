@@ -103,8 +103,7 @@ class CheckoutPage extends Page{
 
     async clickOnPlaceOrderButton() {
         await this.buttonPlaceOrder.click();
-    }
-    
+    }  
 }
-export default new CheckoutPage();
 
+export default new CheckoutPage();

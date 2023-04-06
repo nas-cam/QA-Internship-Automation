@@ -8,7 +8,6 @@ class ProductPage extends Page{
     get productPageHeader() { return $('.page-title');}
     get product() {return $('.noo-product-inner.noo-product-inner2');}
    
-
     async clickToColorDropDown() {
         await this.colorDropdown.click();
     }
@@ -31,7 +30,7 @@ class ProductPage extends Page{
 
     async clickToViewCartButton() {
         await this.buttonViewCart.click();
-    }
-    
+    } 
 }
+
 export default new ProductPage();
