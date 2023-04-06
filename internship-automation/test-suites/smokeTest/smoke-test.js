@@ -1,4 +1,3 @@
-import securePage from '../../pageobjects/secure.page.js'
 import myAccountPage from '../../pageobjects/myAccountPage.js';
 import homePage from '../../pageobjects/homePage.js';
 import productPage from '../../pageobjects/productPage.js';
@@ -15,23 +14,23 @@ describe('001: Smoke test for Shop Tools App', () => {
         await myAccountPage.clickOnPassword();
         await myAccountPage.enterPassword(loginData.validPassword);
         await myAccountPage.clickOnSubmitButton();
-        await expect(securePage.flashAlert).toHaveTextContaining(myAccountPageData.myAccountHeaderText);
+        await expect(myAccountPage.productPageHeader).toHaveTextContaining(myAccountPageData.myAccountHeaderText);
         await myAccountPage.logoClick();
-        await expect(securePage.homepageVal).toHaveTextContaining(myAccountPageData.searchFieldText);
+        await expect(myAccountPage.homePageNavbar).toHaveTextContaining(myAccountPageData.searchFieldText);
         await homePage.scrollToProduct();
-        await expect(securePage.productVal).toBeDisplayed();
+        await expect(productPage.product).toBeDisplayed();
         await homePage.clickToProduct();
-        await expect(securePage.pageHeader).toHaveTextContaining(productPageData.productHeaderText);
+        await expect(productPage.productPageHeader).toHaveTextContaining(productPageData.productHeaderText);
         await productPage.clickToColorDropDown();
         await productPage.selectColor(productPageData.productColor);
         await productPage.clickToSizeDropdown();
         await productPage.selectSize(productPageData.productSize);
         await productPage.clicktoAddToCartButton();
         await productPage.clickToViewCartButton();
-        await expect(securePage.pageHeader).toHaveTextContaining(cartPageData.cartPageHeader);
+        await expect(cartPage.cartPageHeader).toHaveTextContaining(cartPageData.cartPageHeader);
         await cartPage.scrollToTblCart();
         await cartPage.clickToProceedToCheckoutButton();
-        await expect(securePage.pageHeader).toHaveTextContaining(checkoutPageData.checkoutPageHeader);
+        await expect(checkoutPage.checkoutPageHeader).toHaveTextContaining(checkoutPageData.checkoutPageHeader);
         await checkoutPage.clickOnFirstnameField();
         await checkoutPage.enterFirstName(checkoutPageData.firstName);
         await checkoutPage.clickOnLastNameField();
@@ -52,7 +51,7 @@ describe('001: Smoke test for Shop Tools App', () => {
         await checkoutPage.enterEmail(checkoutPageData.email);
         await checkoutPage.clickOnTerms();
         await checkoutPage.clickOnPlaceOrderButton();
-        await expect(securePage.thankYouNote).toHaveTextContaining(checkoutPageData.thankYouNote);
+        await expect(checkoutPage.thankYouNote).toHaveTextContaining(checkoutPageData.thankYouNote);
     });
 });
 

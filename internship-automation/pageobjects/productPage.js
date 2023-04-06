@@ -5,6 +5,9 @@ class ProductPage extends Page{
     get sizeDropdown() { return $('#pa_size'); }
     get buttonAddToCart() { return $('.single_add_to_cart_button.button.alt.wp-element-button'); }
     get buttonViewCart() { return $('a.button.wc-forward.wp-element-button'); }
+    get productPageHeader() { return $('.page-title');}
+    get product() {return $('.noo-product-inner.noo-product-inner2');}
+   
 
     async clickToColorDropDown() {
         await this.colorDropdown.click();

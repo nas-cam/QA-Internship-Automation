@@ -7,7 +7,9 @@ class MyAccountPage extends Page{
     get inputPassword() { return $('//*[@id="password"]'); }
     get buttonSubmit() { return $('[name="login"]'); }
     get header() { return $('.noo-heading-content'); }
-    get logo() { return $('img.custom-logo'); }
+    get logo() { return $('img.custom-logo'); } 
+    get homePageNavbar() {return $('.navbar.navbar-default');}
+    get productPageHeader(){ return $('.noo-page-heading');}
 
     async clickOnUsername(){
         await this.inputUsername.click()
