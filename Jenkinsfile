@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-            // Add any build steps you require, such as installing dependencies
+                sh 'npm install'
             }
         }
         stage('Run Smoke Tests') {
