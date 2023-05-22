@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'nodejs 20.2.0'  // Name of the Node.js installation configured in Jenkins
+        nodejs 'node'  // Name of the Node.js installation configured in Jenkins
     }
 
     stages {
