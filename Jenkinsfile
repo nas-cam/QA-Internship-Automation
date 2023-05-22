@@ -15,7 +15,7 @@ pipeline {
         stage('Run Smoke Tests') {
             steps {
                 script {
-                    def smokeTestCommand = 'run wdio' // Modify this command based on your project's requirements
+                    def smokeTestCommand = 'npm run wdio' // Modify this command based on your project's requirements
                     def smokeTestOutput = sh(returnStdout: true, script: smokeTestCommand).trim()
                     echo smokeTestOutput
                 }
