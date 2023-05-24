@@ -6,6 +6,15 @@ import checkoutPage from '../../pageobjects/checkoutPage.js';
 import { cartPageData, loginData, productPageData } from '../../data/commonData.js';
 import { checkoutPageData, myAccountPageData } from '../../data/commonData.js';
 
+
+import jasmineReporters from 'jasmine-reporters';
+
+jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+  savePath: './reports/',
+  consolidateAll: true,
+}));
+
+
 describe('001: Smoke test for Shop Tools App', () => {
     it('TC-ID-1. User is able to login, to add item to the cart, and to complete order', async () => {
         await myAccountPage.open();
